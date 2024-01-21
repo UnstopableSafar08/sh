@@ -8,7 +8,7 @@
 
 set -x
 sudo dnf remove @mysql -y
-sudo dnf -y module reset mysql && sudo dnf module disable mysql
+sudo dnf -y module reset mysql && sudo dnf -y module disable mysql
 sudo touch /etc/yum.repos.d/mysql-community.repo
 
 echo -e "[mysql57-community]
