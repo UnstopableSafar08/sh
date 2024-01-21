@@ -3,13 +3,14 @@
 # Author : Sagar Malla
 # Date : 2024-Jan-20
 # Desc : This Script install the MySQl8 
-# Version : v1
+# Version : v1.1
 ##########################################
 echo "------------------------------------------------------------"
 echo "This Script file install the MySQL8 on your Machine."
 echo "------------------------------------------------------------"
 set -x 
 set -e
+set -o pipefail
 sudo yum clean all
 sudo subscription-manager repos --enable codeready-builder-for-rhel-8-$(arch)-rpms
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm -y 
