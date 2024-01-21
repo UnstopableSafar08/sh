@@ -9,10 +9,10 @@ echo "------------------------------------------------------------"
 echo "This Script file install the MySQL8 on your Machine."
 echo "------------------------------------------------------------"
 set -x 
-#set -e
+set -e
 #set -o pipefail
 sudo yum clean all
-sudo subscription-manager repos --enable codeready-builder-for-rhel-8-$(arch)-rpms
+#sudo subscription-manager repos --enable codeready-builder-for-rhel-8-$(arch)-rpms
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm -y 
 sudo yum -y install epel-release
 dnf -y install @mysql
