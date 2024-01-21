@@ -3,12 +3,13 @@
 # Author : Sagar Malla
 # Date : 2024-Jan-21
 # Desc : This Script install the MySQl5.7 on RHEL
-# Version : v1
+# Version : v1.1
 ##########################################
 
 set -x
 sudo dnf remove @mysql -y
-sudo dnf -y module reset mysql && sudo dnf -y module disable mysql
+sudo dnf -y module reset mysql
+sudo dnf -y module disable mysql
 sudo touch /etc/yum.repos.d/mysql-community.repo
 
 echo -e "[mysql57-community]
