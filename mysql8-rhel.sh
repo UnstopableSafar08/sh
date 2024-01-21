@@ -3,7 +3,7 @@
 # Author : Sagar Malla
 # Date : 2024-Jan-20
 # Desc : This Script install the MySQl8 
-# Version : v1.4
+# Version : v1.5
 ##########################################
 echo "------------------------------------------------------------"
 echo "This Script file install the MySQL8 on your Machine."
