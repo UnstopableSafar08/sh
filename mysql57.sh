@@ -27,8 +27,8 @@ gpgcheck=0" >> /etc/yum.repos.d/mysql56-community.repo
 
 #sudo rpm --import http://repo.mysql.com/RPM-GPG-KEY-mysql
 #sudo yum autoremove
+sudo rm -rvf /etc/mysql && sudo rm -rvf /var/lib/mysql
 sudo yum install -y mysql-community-server
-
 # set +x #this disable the debug mode 
 # echo ''
 # echo '-----------------------------------------------------------------------------------'
@@ -45,7 +45,6 @@ sudo yum install -y mysql-community-server
 # echo '-----------------------------------------------------------------------------------'
 # echo ''
 # set -x
-sudo rm -rvf /etc/mysql && sudo rm -rvf /var/lib/mysql
 sudo systemctl start mysqld && sudo systemctl enable mysqld
 sudo grep 'temporary password' /var/log/mysqld.log
 sudo mysql_secure_installation
