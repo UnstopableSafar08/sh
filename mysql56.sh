@@ -3,7 +3,7 @@
 # Author : Sagar Malla
 # Date : 2024-Jan-22
 # Desc : This Script install the MySQl_5.6
-# Version : v1.4
+# Version : v1.5
 ##########################################
 set -x
 sudo touch /etc/yum.repos.d/mysql56-community.repo
@@ -46,7 +46,7 @@ sudo yum install -y mysql-community-server
 # echo ''
 # set -x
 
-sudo rm -rvf /etc/mysql && sudo rm -rvf /var/lib/mysql
+#sudo rm -rvf /etc/mysql && sudo rm -rvf /var/lib/mysql
 sudo systemctl start mysqld && sudo systemctl enable mysqld
 sudo grep 'temporary password' /var/log/mysqld.log
 sudo mysql_secure_installation
