@@ -3,6 +3,7 @@
 scripts are used to automate repetitive tasks, making them more efficient and less error-prone than manually entering commands.
 
 #! /bin/bash
+
 ##########################################
 # Author : Sagar Malla
 # Date : 2024-Jan-22
