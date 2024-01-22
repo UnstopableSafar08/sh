@@ -3,7 +3,7 @@
 # Author : Sagar Malla
 # Date : 2024-Jan-22
 # Desc : This Script install the MySQl_5.7
-# Version : v1.5
+# Version : v1.6
 ##########################################
 set -x
 sudo touch /etc/yum.repos.d/mysql57-community.repo
@@ -11,19 +11,7 @@ echo -e "[mysql57-community]
 name=MySQL 5.7 Community Server
 baseurl=http://repo.mysql.com/yum/mysql-5.7-community/el/7/x86_64/
 enabled=1
-gpgcheck=0
-
-[mysql-connectors-community]
-name=MySQL Connectors Community
-baseurl=http://repo.mysql.com/yum/mysql-connectors-community/el/7/x86_64/
-enabled=1
-gpgcheck=0
-
-[mysql-tools-community]
-name=MySQL Tools Community
-baseurl=http://repo.mysql.com/yum/mysql-tools-community/el/7/x86_64/
-enabled=1
-gpgcheck=0" >> /etc/yum.repos.d/mysql56-community.repo
+gpgcheck=0" > /etc/yum.repos.d/mysql56-community.repo
 
 #sudo rpm --import http://repo.mysql.com/RPM-GPG-KEY-mysql
 #sudo yum autoremove
