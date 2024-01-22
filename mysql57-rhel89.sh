@@ -3,7 +3,7 @@
 # Author : Sagar Malla
 # Date : 2024-Jan-21
 # Desc : This Script install the MySQl5.7 on RHEL
-# Version : v1.1
+# Version : v1.2
 ##########################################
 
 set -x
@@ -34,5 +34,6 @@ gpgcheck=0" >> /etc/yum.repos.d/mysql-community.repo
 sudo dnf config-manager --disable mysql80-community
 sudo dnf config-manager --enable mysql57-community
 sudo dnf -y install mysql-community-server
+sudo rm -rvf /etc/mysql && sudo rm -rvf /var/lib/mysql
 systemctl start mysqld && sudo systemctl enable --now mysqld.service && systemctl status mysqld
 sudo grep 'A temporary password' /var/log/mysqld.log |tail -1
