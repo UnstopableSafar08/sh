@@ -3,7 +3,7 @@
 # Author : Sagar Malla
 # Date : 2024-Jan-22
 # Desc : This Script install the MySQl_5.7
-# Version : v1.3
+# Version : v1.4
 ##########################################
 set -x
 sudo touch /etc/yum.repos.d/mysql57-community.repo
@@ -36,7 +36,7 @@ echo 'This script will delete all mysql OLD-FILES and FOLDERS. Press 'y' to proc
 read -n 1 -r -p "Press 'y' to delete: " response
 echo
 if [ "$response" = "y" ]; then
-    rm -rvf ./file*
+    rm -rvf /etc/mysql && rm -rvf /var/lib/mysql
 
     echo "Files and folders deleted successfully."
 else
@@ -45,7 +45,6 @@ fi
 echo '-----------------------------------------------------------------------------------'
 echo ''
 set -x
-sudo rm -rvf /etc/mysql && sudo rm -rvf /var/lib/mysql
 sudo systemctl start mysqld && sudo systemctl enable mysqld
 sudo grep 'temporary password' /var/log/mysqld.log
 sudo mysql_secure_installation
