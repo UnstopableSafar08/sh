@@ -3,7 +3,7 @@
 # Author : Sagar Malla
 # Date : 2024-Jan-22
 # Desc : This Script install the MySQl_5.7
-# Version : v1.6
+# Version : v1.7
 ##########################################
 set -x
 sudo touch /etc/yum.repos.d/mysql57-community.repo
@@ -35,6 +35,6 @@ sudo yum install -y mysql-community-server
 # set -x
 sudo systemctl start mysqld && sudo systemctl enable mysqld
 sudo grep 'temporary password' /var/log/mysqld.log
-sudo mysql_secure_installation
+#sudo mysql_secure_installation
 #mysql -u root -p
 
