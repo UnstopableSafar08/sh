@@ -3,7 +3,7 @@
 # Author : Sagar Malla
 # Date : 2024-Jan-21
 # Desc : This Script install the MySQl5.7 on RHEL
-# Version : v1.3
+# Version : v1.4
 ##########################################
 
 set -x
@@ -15,6 +15,18 @@ sudo touch /etc/yum.repos.d/mysql-community.repo
 echo -e "[mysql57-community]
 name=MySQL 5.7 Community Server
 baseurl=http://repo.mysql.com/yum/mysql-5.7-community/el/7/x86_64/
+enabled=1
+gpgcheck=0
+
+[mysql-connectors-community]
+name=MySQL Connectors Community
+baseurl=http://repo.mysql.com/yum/mysql-connectors-community/el/7/x86_64/
+enabled=1
+gpgcheck=0
+
+[mysql-tools-community]
+name=MySQL Tools Community
+baseurl=http://repo.mysql.com/yum/mysql-tools-community/el/7/x86_64/
 enabled=1
 gpgcheck=0" > /etc/yum.repos.d/mysql57-community.repo
 
