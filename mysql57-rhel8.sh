@@ -3,12 +3,12 @@
 # Author : Sagar Malla
 # Date : 2024-Jan-21
 # Desc : This Script install the MySQl5.7 on RHEL
-# Version : v1.5
+# Version : v1.6
 ##########################################
 
 set -x
 subscription-manager repos --enable codeready-builder-for-rhel-8-$(arch)-rpms
-dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm -y
 sudo dnf remove @mysql -y
 sudo dnf -y module reset mysql
 sudo dnf -y module disable mysql
