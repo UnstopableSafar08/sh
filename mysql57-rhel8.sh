@@ -8,7 +8,7 @@
 
 set -x
 subscription-manager repos --enable codeready-builder-for-rhel-8-$(arch)-rpms
-dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 sudo dnf remove @mysql -y
 sudo dnf -y module reset mysql
 sudo dnf -y module disable mysql
