@@ -3,13 +3,13 @@
 # Author : Sagar Malla
 # Date : 2024-Jan-21
 # Desc : This Script uninstall the MySQL
-# Version : v1.2
+# Version : v1.3
 ##########################################
 
 set -x
 
 sudo yum remove mysql* -y
-sudo rm -rvf /etc/mysql && sudo rm -rvf /var/lib/mysql
+sudo rm -rvf /etc/mysql && sudo rm -rvf /var/lib/mysql && sudo rm -rvf  /var/log/mysqld.log
 rpm -qa | grep mysql 
 rpm -qa mysql-*
 
