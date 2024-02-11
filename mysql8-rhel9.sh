@@ -3,7 +3,7 @@
 # Author : Sagar Malla
 # Date : 2024-Jan-20
 # Desc : This Script install the MySQl8 
-# Version : v1.5
+# Version : v1.6
 ##########################################
 echo "------------------------------------------------------------"
 echo "This Script file install the MySQL8 on your Machine."
@@ -30,9 +30,9 @@ sudo wget https://repo.mysql.com//mysql80-community-release-el9-1.noarch.rpm
 sudo dnf localinstall mysql80-community-release-el9-1.noarch.rpm -y
 ###dnf repolist enabled | grep "mysql.*-community.*"
 sudo dnf install mysql-community-server -y
-sudo systemctl status mysqld
 sudo systemctl start mysqld
 sudo systemctl enable mysqld
+sudo systemctl status mysqld
 mysql --version  #mysql -V
 sudo grep 'temporary password' /var/log/mysqld.log
 # dnf -y install @mysql
@@ -41,5 +41,7 @@ sudo grep 'temporary password' /var/log/mysqld.log
 # sudo systemctl status mysqld.service
 # mysql --version  #mysql -V
 # sudo grep 'temporary password' /var/log/mysqld.log
-mysql_secure_installation
+set +x
+echo " - - - "
+echo "Run mysql secure configuration cmd --> mysql_secure_installation"
 #mysql -u root -p
