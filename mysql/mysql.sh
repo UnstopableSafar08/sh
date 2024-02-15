@@ -1,4 +1,10 @@
-#!/bin/bash
+#! /bin/bash
+##########################################
+# Author : Sagar Malla
+# Date : 2024-Feb-15
+# Desc : 
+# Version : v1.5
+##########################################
 echo "---------------------"
 echo  -e "Choice1 : CentOS-MySQL5.7 \nChoice2 : CentOS-MySQL8 \nChoice3 : RHEL-MySQL5.7 \nChoice4 : RHEL-MySQL8 \nChoice5 : MySQL-Uninstall"
 echo "---------------------"
