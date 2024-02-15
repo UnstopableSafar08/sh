@@ -19,12 +19,12 @@ case $choice in
         # Add your code for Option 3 here
         ;;
     4)
-        echo "You selected Option 3."
-        # Add your code for Option 3 here
+        echo "You selected Option 4."
+        # Add your code for Option 4 here
         ;;
     5)
-        echo "You selected Option 3."
-        # Add your code for Option 3 here
+        echo "You selected Option 5."
+        # Add your code for Option 5 here
         ;;
     *)
         echo "Invalid choice. Please enter a number between 1 and 5."
