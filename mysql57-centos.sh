@@ -6,12 +6,13 @@
 # Version : v1.7
 ##########################################
 set -x
+sudo yum install epel-release -y
 sudo touch /etc/yum.repos.d/mysql57-community.repo
 echo -e "[mysql57-community]
 name=MySQL 5.7 Community Server
 baseurl=http://repo.mysql.com/yum/mysql-5.7-community/el/7/x86_64/
 enabled=1
-gpgcheck=0" > /etc/yum.repos.d/mysql56-community.repo
+gpgcheck=0" > /etc/yum.repos.d/mysql57-community.repo
 
 #sudo rpm --import http://repo.mysql.com/RPM-GPG-KEY-mysql
 #sudo yum autoremove
