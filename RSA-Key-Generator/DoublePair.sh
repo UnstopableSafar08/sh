@@ -7,6 +7,9 @@
 # Clear the screen
 clear
 
+# Declare global variable for prefix
+prefix=""
+
 # function that ask key pair name to user.
 rsa_key_pair_name() {
     echo -e "\n********************************************************"
@@ -91,14 +94,14 @@ generate_keys() {
 #     fi
 # done
 
+# function call rsa_key_pair_name
+rsa_key_pair_name
+
 # Define RSA_KEY_PAIRS parent and child directories path.
 base_dir="./$prefix"
 encryption_dir="$base_dir/${prefix}_encryption_key_pair"
 signature_dir="$base_dir/${prefix}_signature_key_pair"
 mkdir -p "$encryption_dir" "$signature_dir"
-
-# function call rsa_key_pair_name
-rsa_key_pair_name
 
 # Function call : rsa-keySize validation
 rsa_keySize
