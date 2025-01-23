@@ -7,6 +7,9 @@
 # Clear the screen
 clear
 
+# Declare global variable for prefix
+prefix=""
+
 # function that ask key pair name to user.
 rsa_key_pair_name() {
     echo -e "\n********************************************************"
@@ -68,6 +71,10 @@ rsa_keySize() {
 #     fi
 # done
 
+# function call rsa_key_pair_name
+rsa_key_pair_name
+
+
 # Define RSA_KEY_PAIR dir path.
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/${prefix}_rsa_key_pair"
 mkdir -p "$script_dir"
@@ -79,8 +86,6 @@ private_key_pkcs8="$script_dir/${prefix}_private_key_pkcs8.pem"
 base64_encoded_key="$script_dir/${prefix}_base64_encoded_private_key.txt"
 final_public_key="$script_dir/${prefix}_final_public_key.txt"
 
-# function call rsa_key_pair_name
-rsa_key_pair_name
 
 # call rsa-keySize function.
 rsa_keySize
