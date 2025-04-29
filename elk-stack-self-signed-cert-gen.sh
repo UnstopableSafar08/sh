@@ -1,8 +1,11 @@
 #!/bin/bash
 
-# ==== CONFIGURATION ====
-CA_DIR="/etc/elasticsearch/certs/ca"
-CERTS_DIR="/etc/elasticsearch/certs"
+mkdir -p /root/elk-self-signed-cert
+# # ==== CONFIGURATION ====
+# CA_DIR="/etc/elasticsearch/certs/ca"
+# CERTS_DIR="/etc/elasticsearch/certs"
+CA_DIR="/root/elk-self-signed-cert/ca"
+CERTS_DIR="/root/elk-self-signed-cert"
 SERVICES=("elasticsearch" "logstash" "kibana")
 IP_ADDRESS="0.0.0.0"  # Change to specific IP if needed
 # ========================
